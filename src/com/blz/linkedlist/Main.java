@@ -14,6 +14,7 @@ public class Main {
         System.out.println("Enter 5 to delete element from start");
         System.out.println("Enter 6 to delete element from last");
         System.out.println("Enter 7 to search the element");
+        System.out.println("Enter 8 to add the element in linked list");
         switch (sc.nextInt()){
             case 1:
                 Operation.createSimpleLikedList();
@@ -35,6 +36,9 @@ public class Main {
                 break;
             case 7:
                 Operation.searchTheElement();
+                break;
+            case 8:
+                Operation.insertTheElement();
                 break;
 
             default:

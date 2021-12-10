@@ -7,15 +7,15 @@ public class Operation {
         Node firstNode = new Node(56);
         Node secondNode = new Node(30);
         Node thirdNode = new Node(70);
-        firstNode .next = secondNode;
+        firstNode.next = secondNode;
         secondNode.next = thirdNode;
         Node head = firstNode;
         Node tail = thirdNode;
 
-        Node temp =head;
-        while(temp!=null){
+        Node temp = head;
+        while (temp != null) {
             System.out.println(temp.data);
-            temp= temp.next;
+            temp = temp.next;
         }
     }
 
@@ -29,7 +29,7 @@ public class Operation {
     }
 
     public static void addElementAtEnd() {
-        LinkedList linkedList =new LinkedList();
+        LinkedList linkedList = new LinkedList();
         linkedList.appendData(56);
         linkedList.appendData(30);
         linkedList.appendData(70);
@@ -41,7 +41,7 @@ public class Operation {
         linkedList.push(70);
         linkedList.push(56);
         linkedList.addInMid(30);
-       linkedList.print();
+        linkedList.print();
 
     }
 
@@ -55,7 +55,7 @@ public class Operation {
     }
 
     public static void deleteElementInLast() {
-        LinkedList linkedList=addElementInStart();
+        LinkedList linkedList = addElementInStart();
         System.out.println("Before");
         linkedList.print();
         linkedList.remove();
@@ -64,22 +64,33 @@ public class Operation {
     }
 
     public static void searchTheElement() {
-        LinkedList linkedList=addElementInStart();
+        LinkedList linkedList = addElementInStart();
         linkedList.print();
         System.out.println("Enter element you want to search");
-        int a=(new Scanner(System.in)).nextInt();
-        int position= linkedList.searchElement(a);
-        System.out.println("Element present at "+position);
+        int a = (new Scanner(System.in)).nextInt();
+        int position = linkedList.searchElement(a);
+        System.out.println("Element present at " + position);
     }
 
     public static void insertTheElement() {
-        LinkedList linkedList=addElementInStart();
+        LinkedList linkedList = addElementInStart();
         System.out.println("Before");
         linkedList.print();
-        linkedList.insertAfter(30,40);
+        linkedList.insertAfter(30, 40);
         System.out.println("After");
         linkedList.print();
 
     }
+
+    public static void deleteNode() {
+        LinkedList linkedList = addElementInStart();
+        linkedList.print();
+        System.out.println("Enter element you want to Delete");
+        int a = (new Scanner(System.in)).nextInt();
+        linkedList.deleteNode(a);
+        linkedList.print();
+    }
+
 }
+
 

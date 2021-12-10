@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Enter 2 to add element in start linked list");
         System.out.println("Enter 3 to add element in end");
         System.out.println("Enter 4 to add element in mid ");
+        System.out.println("Enter 5 to delete element from start");
         switch (sc.nextInt()){
             case 1:
                 Operation.createSimpleLikedList();
@@ -23,6 +24,10 @@ public class Main {
                 break;
             case 4:
                 Operation.addElementInMid();
+                break;
+            case 5:
+                Operation.deleteElementInStart();
+                break;
             default:
                 System.out.println("please enter correct option");
 

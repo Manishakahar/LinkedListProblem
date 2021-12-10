@@ -91,6 +91,15 @@ public class Operation {
         linkedList.print();
     }
 
+    public static void insertOderOfSort() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertSort(56);
+        linkedList.insertSort(30);
+        linkedList.insertSort(40);
+        linkedList.insertSort(70);
+        linkedList.print();
+
+    }
 }
 
 

@@ -8,11 +8,12 @@ public class Main {
         System.out.println("Welcome to Linked List");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1 to create simple linked list");
-        System.out.println("Enter 2 to add element in start linked list");
+        System.out.println("Enter 2 to add element in start ");
         System.out.println("Enter 3 to add element in end");
         System.out.println("Enter 4 to add element in mid ");
         System.out.println("Enter 5 to delete element from start");
         System.out.println("Enter 6 to delete element from last");
+        System.out.println("Enter 7 to search the element");
         switch (sc.nextInt()){
             case 1:
                 Operation.createSimpleLikedList();
@@ -32,6 +33,10 @@ public class Main {
             case 6:
                 Operation.deleteElementInLast();
                 break;
+            case 7:
+                Operation.searchTheElement();
+                break;
+
             default:
                 System.out.println("please enter correct option");
 

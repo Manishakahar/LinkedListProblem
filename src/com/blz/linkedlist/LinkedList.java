@@ -11,68 +11,77 @@ public class LinkedList {
             this.tail = newNode;
         } else {
             Node temp = this.head;
-            this.head=newNode;
-            newNode.next= temp;
+            this.head = newNode;
+            newNode.next = temp;
         }
     }
-    public void print(){
+
+    public void print() {
         Node temp = head;
-        if (head == null){
+        if (head == null) {
             System.out.println("Linked list is empty");
-        }else {
-            while (temp != null){
+        } else {
+            while (temp != null) {
                 if (temp.next != null) {
                     System.out.print(temp.data + "->");
-                }else {
+                } else {
                     System.out.println(temp.data);
                 }
-                temp =temp.next;
+                temp = temp.next;
             }
         }
     }
 
     public void appendData(int data) {
-        Node newNode=new Node(data);
-        if (head==null){
-            head= newNode;
-            tail=newNode;
-        }
-        else {
-            tail.next=newNode;
-            tail=newNode;
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
         }
     }
 
     public void addInMid(int data) {
-       Node newNode= new Node(data);
-       Node current = null, temp;
-       if (head==null){
-           head= newNode;
-           tail=newNode;
-       }
-       else {
-           int size = size();
-           int center = (size % 2==0) ? size/ 2 : (size+1) /2;
-           temp=head;
-           for(int i = 0;i < center; i++){
-               current = temp;
-               temp = temp.next;
-           }
+        Node newNode = new Node(data);
+        Node current = null, temp;
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            int size = size();
+            int center = (size % 2 == 0) ? size / 2 : (size + 1) / 2;
+            temp = head;
+            for (int i = 0; i < center; i++) {
+                current = temp;
+                temp = temp.next;
+            }
             current.next = newNode;
-           newNode.next = temp;
-       }
+            newNode.next = temp;
+        }
     }
-    public int size(){
+
+    public int size() {
         int length = 0;
         Node temp = head;
-        while (temp != null){
+        while (temp != null) {
             length++;
             temp = temp.next;
         }
         return length;
     }
+
     public void pop() {
         this.head = this.head.next;
+    }
+
+    public void remove() {
+        Node newNode = this.head;
+        while (newNode.next != null) {
+            newNode = newNode.next;
+            newNode.next = null;
+        }
     }
 }
 

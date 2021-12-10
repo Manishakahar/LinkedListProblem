@@ -51,4 +51,14 @@ public class Operation {
         System.out.println("After");
         linkedList.print();
     }
+
+    public static void deleteElementInLast() {
+        LinkedList linkedList=addElementInStart();
+        System.out.println("Before");
+        linkedList.print();
+        linkedList.remove();
+        System.out.println("After");
+        linkedList.print();
+    }
 }
+

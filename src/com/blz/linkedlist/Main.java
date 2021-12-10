@@ -8,8 +8,9 @@ public class Main {
         System.out.println("Welcome to Linked List");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1 to create simple linked list");
-        System.out.println("Enter 2 add element in start linked list");
-        System.out.println("Enter 3 add element in end");
+        System.out.println("Enter 2 to add element in start linked list");
+        System.out.println("Enter 3 to add element in end");
+        System.out.println("Enter 4 to add element in mid ");
         switch (sc.nextInt()){
             case 1:
                 Operation.createSimpleLikedList();
@@ -20,6 +21,8 @@ public class Main {
             case 3:
                 Operation.addElementAtEnd();
                 break;
+            case 4:
+                Operation.addElementInMid();
             default:
                 System.out.println("please enter correct option");
 

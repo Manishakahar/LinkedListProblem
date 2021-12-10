@@ -32,14 +32,44 @@ public class LinkedList {
     }
 
     public void appendData(int data) {
-        Node node=new Node(data);
-        if(head==null){
-            this.head=node;
+        Node newNode=new Node(data);
+        if (head==null){
+            head= newNode;
+            tail=newNode;
         }
         else {
-            tail.next=node;
+            tail.next=newNode;
+            tail=newNode;
         }
-        this.tail=node;
+    }
+
+    public void addInMid(int data) {
+       Node newNode= new Node(data);
+       Node current = null, temp;
+       if (head==null){
+           head= newNode;
+           tail=newNode;
+       }
+       else {
+           int size = size();
+           int center = (size % 2==0) ? size/ 2 : (size+1) /2;
+           temp=head;
+           for(int i = 0;i < center; i++){
+               current = temp;
+               temp = temp.next;
+           }
+            current.next = newNode;
+           newNode.next = temp;
+       }
+    }
+    public int size(){
+        int length = 0;
+        Node temp = head;
+        while (temp != null){
+            length++;
+            temp = temp.next;
+        }
+        return length;
     }
 }
 
